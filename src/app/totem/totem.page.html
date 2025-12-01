@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Totem</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- NAV BONITA -->
+  <ion-segment value="totem">
+    <ion-segment-button routerLink="/totem" value="totem">
+      <ion-label>Totem</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button routerLink="/atendente" value="atendente">
+      <ion-label>Atendente</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button routerLink="/painel" value="painel">
+      <ion-label>Painel</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <br>
+
+  <!-- BOTOES GRANDES E BONITOS -->
+  <ion-button expand="block" size="large" color="success" (click)="emitir('SP')">
+    Prioritária (SP)
+  </ion-button>
+
+  <ion-button expand="block" size="large" color="tertiary" (click)="emitir('SE')">
+    Exames (SE)
+  </ion-button>
+
+  <ion-button expand="block" size="large" color="medium" (click)="emitir('SG')">
+    Geral (SG)
+  </ion-button>
+
+  <h2 *ngIf="ultima" style="margin-top:20px; text-align:center;">
+    Última senha emitida: <strong>{{ ultima }}</strong>
+  </h2>
+
+</ion-content>

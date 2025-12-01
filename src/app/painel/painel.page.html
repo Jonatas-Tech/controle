@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Painel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-segment value="painel">
+    <ion-segment-button routerLink="/totem" value="totem">
+      <ion-label>Totem</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button routerLink="/atendente" value="atendente">
+      <ion-label>Atendente</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button routerLink="/painel" value="painel">
+      <ion-label>Painel</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <br>
+
+  <ion-list>
+    <ion-item *ngFor="let s of chamadas">
+      <ion-label>{{ s }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
